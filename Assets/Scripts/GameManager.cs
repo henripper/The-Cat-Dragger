@@ -1,20 +1,24 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 
 {
+    public GameObject pauseMenuUI;
+    bool gameIsPaused = false;
     bool gameHasEnded = false;
     public float restartDelay = 2f;
     public GameObject compeleteLevelUI;
     public void CompleteLevel()
     {
         compeleteLevelUI.SetActive(true);
-    
-    {
-        
+
+        {
+
+        }
     }
-}
     public void EndGame()
     {
         if (gameHasEnded == false)
@@ -24,8 +28,47 @@ public class GameManager : MonoBehaviour
             Invoke("Restart", restartDelay);
         }
     }
-    void Restart ()
+    void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+
+
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (gameIsPaused)
+            {
+                Resume();
+                Time.timeScale = 1;
+            }
+
+            else
+            {
+                Pause();
+                Time.timeScale = 0;
+            }
+
+        }
+    }
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1;
+        gameIsPaused = false;
+    }
+    void Pause()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0;
+        gameIsPaused = true;
+    }
+    public void LoadMenu()
+    {
+
+    }
+
 }
