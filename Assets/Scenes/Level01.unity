@@ -1308,7 +1308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6cec0bec81b21f499724b4061ac78c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
+  pauseMenuUI: {fileID: 676811019}
 --- !u!1001 &2090519909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1836,6 +1836,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 533273561149417651, guid: 31d15faf9144f614ea40ca6bd3654248,
+        type: 3}
+      propertyPath: pauseMenuUI
+      value: 
+      objectReference: {fileID: 676811019}
     - target: {fileID: 5955949291663878670, guid: 31d15faf9144f614ea40ca6bd3654248,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1971,11 +1976,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 676811021}
-    - target: {fileID: 533273561149417651, guid: 31d15faf9144f614ea40ca6bd3654248,
-        type: 3}
-      propertyPath: pauseMenuUI
-      value: 
-      objectReference: {fileID: 676811019}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31d15faf9144f614ea40ca6bd3654248, type: 3}
 --- !u!1001 &8522146206610840284

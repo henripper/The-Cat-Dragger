@@ -43,13 +43,13 @@ public class GameManager : MonoBehaviour
             if (gameIsPaused)
             {
                 Resume();
-                Time.timeScale = 1;
+                Time.timeScale = 1f;
             }
 
             else
             {
                 Pause();
-                Time.timeScale = 0;
+                Time.timeScale = 0f;
             }
 
         }
@@ -57,18 +57,15 @@ public class GameManager : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
         gameIsPaused = false;
     }
     void Pause()
     {
         pauseMenuUI.SetActive(true);
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
         gameIsPaused = true;
     }
-    public void LoadMenu()
-    {
-
-    }
+    
 
 }
