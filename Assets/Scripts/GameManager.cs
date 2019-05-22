@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 
 {
+    
     public GameObject pauseMenuUI;
     bool gameIsPaused = false;
     bool gameHasEnded = false;
